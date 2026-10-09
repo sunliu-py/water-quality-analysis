@@ -27,7 +27,7 @@ def load_data():
             host='localhost',
             port=3306,
             user='root',
-            password='123456',
+            password='your_password',   # 改成自己的密码
             database='water_monitor',
             charset='utf8mb4'
         ) as conn:
