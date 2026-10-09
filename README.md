@@ -71,7 +71,7 @@ water-quality-analysis/
 
 ### 1. 数据生成
 - 按站点 × 指标 × 时间生成随机数据
-- 不同指标按不同范围生成数值
+- 不同指标按不同范围生成数值    5000条数据
 
 ### 2. 数据入库
 - 批量插入，每 1000 条提交一次
@@ -83,15 +83,18 @@ water-quality-analysis/
 ### 4. 可视化
 - 柱状图：5 站点 COD 均值对比
 - 箱线图：各站点 COD 分布
-- 折线图：城北 COD 月均值 + 阈值线
+- 折线图：多年城北 COD 月均值 + 阈值线
 
 ---
 
 ## 核心分析结论
 
 - **城北污水处理厂** COD 均值最高
-- COD 是最容易超标的指标
+- 浊度 是最容易超标的指标  其次是总磷
+- 城北多年数据统一呈现：**7 月 COD 月均值达到全年峰值**，是很典型的季节性污染特征。
 - 各站点 COD 均值在 29~33 mg/L 之间
+- 城西超标次数最多
+- 
 
 ---
 
@@ -99,7 +102,13 @@ water-quality-analysis/
 
 ![5 站点 COD 均值对比](src/output/cod_bar.png)
 
-![各站点 COD 箱线图](src/output/cod_boxplot.png)
+![各站点 COD 箱线图](src/output/test_cod_bar.png)
+
+### 城北 COD 月均值（pyecharts）
+
+![城北 COD 月均值](src/output/cod_line.png)
+
+> 交互式版本：[cod_line.html](src/output/cod_line.html)
 
 ---
 
@@ -157,4 +166,4 @@ python chart.py
 
 ## 作者
 
-你的名字 | 2594236411@qq.com | [GitHub](https://github.com/你的用户名)
+sunliu | 2594236411@qq.com | [GitHub](https://github.com/sunliu-py/water-quality-analysis.git)
